@@ -31,7 +31,7 @@ jobs:
         run: dotnet build **/*.csproj --no-restore
 
       - name: Run tests
-        run: dotnet test --configuration ${{ matrix.configuration }} --no-build --verbosity normal
+        run: dotnet test **/*.csproj --no-build --verbosity normal
 
       - name: Custom Script - Clean up artifacts
         run: |
